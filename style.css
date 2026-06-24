@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    }
+    
+    body{
+    background:#f4f7fc;
+    }
+    
+    .container{
+    display:flex;
+    min-height:100vh;
+    }
+    
+    /* Sidebar */
+    
+    .sidebar{
+    width:260px;
+    background:#07132b;
+    color:white;
+    padding:20px;
+    position:fixed;
+    height:100%;
+    overflow-y:auto;
+    }
+    
+    .logo{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:40px;
+    }
+    
+    .logo-icon{
+    width:55px;
+    height:55px;
+    background:#2563eb;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    }
+    
+    .logo p{
+    font-size:12px;
+    color:#9ca3af;
+    }
+    
+    .sidebar h4{
+    margin:25px 0 10px;
+    color:#64748b;
+    text-transform:uppercase;
+    font-size:12px;
+    }
+    
+    .sidebar a{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:8px;
+    cursor:pointer;
+    transition:.3s;
+    }
+    
+    .sidebar a:hover{
+    background:#1e40af;
+    }
+    
+    .active{
+    background:#2563eb;
+    }
+    
+    /* Main */
+    
+    .main-content{
+    margin-left:260px;
+    width:100%;
+    padding:30px;
+    }
+    
+    .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    }
+    
+    .search{
+    background:white;
+    padding:12px 18px;
+    border-radius:12px;
+    width:400px;
+    display:flex;
+    gap:10px;
+    }
+    
+    .search input{
+    border:none;
+    outline:none;
+    width:100%;
+    }
+    
+    .profile{
+    background:white;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:600;
+    }
+    
+    .welcome{
+    margin-bottom:25px;
+    }
+    
+    .welcome h1{
+    font-size:36px;
+    }
+    
+    .welcome p{
+    color:#64748b;
+    }
+    
+    /* Cards */
+    
+    .cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    }
+    
+    .card{
+    padding:30px;
+    border-radius:20px;
+    color:white;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    }
+    
+    .card h2{
+    font-size:38px;
+    margin-bottom:10px;
+    }
+    
+    .blue{
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    }
+    
+    .orange{
+    background:linear-gradient(135deg,#f97316,#fb923c);
+    }
+    
+    .green{
+    background:linear-gradient(135deg,#10b981,#34d399);
+    }
+    
+    .purple{
+    background:linear-gradient(135deg,#7c3aed,#a855f7);
+    }
+    
+    .cyan{
+    background:linear-gradient(135deg,#06b6d4,#22d3ee);
+    }
+    
+    .red{
+    background:linear-gradient(135deg,#ef4444,#fb7185);
+    }
+    
+    .teal{
+    background:linear-gradient(135deg,#0891b2,#06b6d4);
+    }
+    
+    .violet{
+    background:linear-gradient(135deg,#6d28d9,#9333ea);
+    }
+    
+    /* Bottom */
+    
+    .bottom-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-top:25px;
+    }
+    
+    .chart-box{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    }
+    
+    .chart-placeholder{
+    height:350px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8fafc;
+    border-radius:15px;
+    margin-top:15px;
+    }
+    
+    .circle-chart{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    border:25px solid #2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-weight:bold;
+    margin:20px auto;
+    }
+    
+    /* Responsive */
+    
+    @media(max-width:1200px){
+    
+    .cards{
+    grid-template-columns:repeat(2,1fr);
+    }
+    
+    .bottom-grid{
+    grid-template-columns:1fr;
+    }
+    }
+    
+    @media(max-width:768px){
+    
+    .sidebar{
+    transform:translateX(-100%);
+    }
+    
+    .main-content{
+    margin-left:0;
+    }
+    
+    .cards{
+    grid-template-columns:1fr;
+    }
+    
+    .search{
+    width:100%;
+    }
+    
+    .topbar{
+    flex-direction:column;
+    gap:15px;
+    }
+    }
